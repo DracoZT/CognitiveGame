@@ -1,5 +1,6 @@
 package com.cognitive.game.android;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,20 +14,20 @@ public class AndroidLauncher extends AndroidApplication implements CognitiveGame
 
 	private float[] player_pos = new float[2];
 	private boolean[] box_opened = new boolean[7];
-	public CognitiveGame.MyGameCallBack temp;
+
 	public CognitiveGame cognitiveGameTemp;
 	public AndroidApplicationConfiguration configTemp;
+	private Context context;
+
 
 
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+
 		final CognitiveGame.MyGameCallBack temp = this;
-		if(getIntent().getFloatArrayExtra("Player") != null)
-			player_pos = getIntent().getFloatArrayExtra("Player");
-		if(getIntent().getBooleanArrayExtra("Box") != null)
-			box_opened = getIntent().getBooleanArrayExtra("Box");
+
 
 		setContentView(R.layout.android_launcher);
         Button startButton = (Button) findViewById(R.id.launcher_button);
@@ -38,6 +39,7 @@ public class AndroidLauncher extends AndroidApplication implements CognitiveGame
 				//CognitiveGame cognitiveGame = new CognitiveGame(player_pos, box_opened);
 				//cognitiveGame.setMyGameCallBack(temp);
 				//initialize(new CognitiveGame(player_pos,box_opened), new AndroidApplicationConfiguration());
+
             }
 
         });
@@ -50,7 +52,7 @@ public class AndroidLauncher extends AndroidApplication implements CognitiveGame
 
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		CognitiveGame cognitiveGame = new CognitiveGame(player_pos, box_opened);
-		cognitiveGame.setMyGameCallBack(this);
+		cognitiveGame.setMyGameCallBack(temp);
 		initialize(cognitiveGame, config);
 
 	}
