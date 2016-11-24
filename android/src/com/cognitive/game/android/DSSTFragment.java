@@ -104,11 +104,12 @@ public class DSSTFragment extends Fragment {
                 public void onClick(View v) {
                     textClicked.add(0);
                     for (int j = 0; j < textClicked.size(); j++) {
-                        int temp = textClicked.get(j);
-                        textVacant.get(j).setText(String.valueOf(answerArray[temp]));
-                        textVacant.get(j).setVisibility(VISIBLE);
-                        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
-                        System.out.println(temp);
+                            int temp = textClicked.get(j);
+                            textVacant.get(j).setText(String.valueOf(answerArray[temp]));
+                            textVacant.get(j).setVisibility(VISIBLE);
+                            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
+                            System.out.println(temp);
+
                     }
 
                 }
