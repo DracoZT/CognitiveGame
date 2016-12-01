@@ -166,13 +166,21 @@ public class VisualMemFragment extends Fragment {
                 //AndroidLauncher.finalRes.add("Correct");
                 AndroidLauncher.finalResTit.add("Visual Memory Test" + " Difficulty Level: " + temp);
                 AndroidLauncher.finalResVal.add("Correct");
-                if (VisualActivity.IMAGECOUNTER == 5) {
-                    VisualActivity.coins_visual = VisualActivity.coins_visual + 10;
 
+                if(VisualActivity.IMAGECOUNTER == 4){
+                    VisualActivity.coins_visual = VisualActivity.coins_visual + 5;
                     mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
                     mediaPlayer.setLooping(false);
                     mediaPlayer.start();
                 }
+
+                if (VisualActivity.IMAGECOUNTER == 5) {
+                    VisualActivity.coins_visual = VisualActivity.coins_visual + 10;
+                    mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
+                    mediaPlayer.setLooping(false);
+                    mediaPlayer.start();
+                }
+
                 Intent intent = new Intent (getActivity(), AndroidLauncher.class);
                 intent.putExtra("Player",VisualActivity.player_pos_visual);
                 intent.putExtra("Box", VisualActivity.box_opened_visual);

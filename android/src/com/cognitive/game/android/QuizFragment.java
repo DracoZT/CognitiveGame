@@ -165,6 +165,13 @@ public class QuizFragment extends Fragment{
                             mediaPlayer.start();
                         }
 
+                        if(nBack == 2 && correct > 5){
+                            QuizActivity.coins_quiz = QuizActivity.coins_quiz + 5;
+                            mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
+                            mediaPlayer.setLooping(false);
+                            mediaPlayer.start();
+                        }
+
                         Intent intent = new Intent (getActivity(), AndroidLauncher.class);
                         intent.putExtra("Player", QuizActivity.player_pos);
                         intent.putExtra("Box", QuizActivity.box_opened);
