@@ -244,7 +244,7 @@ public class DSSTFragment extends Fragment {
                 }
             }
         }
-        if (counterCorr >= 3){
+        if (counterCorr >= 6){
             DSSTActivity.coins = DSSTActivity.coins + 10;
         }
         soundTemp = counterCorr;
@@ -270,7 +270,7 @@ public class DSSTFragment extends Fragment {
                 ft.replace(R.id.main_interface, mst);
                 ft.commit();
                 */
-                if (soundTemp >= 3){
+                if (soundTemp >= 6){
 
                     mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
                     mediaPlayer.setLooping(false);

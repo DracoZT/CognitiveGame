@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class EndActivity extends Activity {
     public static int coins_final;
@@ -17,6 +18,8 @@ public class EndActivity extends Activity {
         coins_final = getIntent().getIntExtra("Coins", 0);
         Button end = (Button) findViewById(R.id.end_btn);
         ImageButton resultBtn = (ImageButton) findViewById(R.id.result_btn) ;
+        TextView coins = (TextView) findViewById(R.id.gold_text);
+        coins.setText(" X " + String.valueOf(coins_final));
 
         end.setOnClickListener(new View.OnClickListener() {
             @Override

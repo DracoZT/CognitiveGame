@@ -30,10 +30,12 @@ public class ResultActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
+        /*
         TextView goldenText = (TextView)findViewById(R.id.gold_text);
         System.out.println("^^^^^^^^^^^^^^^^" + EndActivity.coins_final);
         goldenText.setText(" x " + String.valueOf(EndActivity.coins_final));
         goldenText.setVisibility(View.VISIBLE);
+        */
         result_list_title = AndroidLauncher.finalResTit;
         result_list_value = AndroidLauncher.finalResVal;
 
@@ -57,7 +59,7 @@ public class ResultActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.back_to_end){
-            Intent intent = new Intent (this, EndActivity.class);
+            Intent intent = new Intent (this, EndActivity.class).putExtra("Coins", EndActivity.coins_final);
             startActivity(intent);
             this.finish();
             return true;

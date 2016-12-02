@@ -158,14 +158,14 @@ public class QuizFragment extends Fragment{
                         ft.commit();
                     }
                     else{
-                        if (nBack == 3 && correct > 5){
+                        if (nBack == 3 && correct > 3){
                             QuizActivity.coins_quiz = QuizActivity.coins_quiz + 10;
                             mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
                             mediaPlayer.setLooping(false);
                             mediaPlayer.start();
                         }
 
-                        if(nBack == 2 && correct > 5){
+                        if(nBack == 2 && correct > 3){
                             QuizActivity.coins_quiz = QuizActivity.coins_quiz + 5;
                             mediaPlayer = MediaPlayer.create(getActivity(), R.raw.coin_collect);
                             mediaPlayer.setLooping(false);
