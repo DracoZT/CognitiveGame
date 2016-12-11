@@ -16,7 +16,7 @@
     <string name="title_activity_log_in">LogInActivity</string>
     <string name="title_activity_end">EndActivity</string>
     <string name="instruction_content">Finally you are awake. You were misled by the dark magic in this forest and as you are trapped here,
-        there is no way leading you outside this place unless you could find four missing rubies. Those rubies are hidden in treasure boxes
+        there is no way leading you outside this place unless you could find three missing rubies. Those rubies are hidden in treasure boxes
         somewhere in the forest. You will be asked to take some challenges when opening the boxes, and you will get gold as rewards as well.
         You should find another guard in the forest to help you out once you find all the rubies.
     </string>

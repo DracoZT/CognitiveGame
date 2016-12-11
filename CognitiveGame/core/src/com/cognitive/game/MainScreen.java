@@ -130,7 +130,7 @@ public class MainScreen extends ScreenAdapter {
         }
 
         if(myActor.ifHitNPC() == 2) {
-            if(myActor.diamondN >= 4)
+            if(myActor.diamondN >= 3)
                 cg.myGameCallBack.onStartEndActivity(cg.coins);
         }
 
